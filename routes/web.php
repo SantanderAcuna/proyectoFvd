@@ -9,6 +9,12 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+// ruta especial de migraciones
+
+Route::resource('migracion', 'MigracionController');
+
+Route::post('migracion', 'MigracionController@store')->name('migracion.store');
+
 
 Route::resource('simcard', 'SimcardController');
 
@@ -56,7 +62,7 @@ Route::resource('simcard', 'SimcardController');
 
 Route::post('/', 'SimcardController@importarSimcard')->name('importar.simcard');
 Route::post('simcard', 'SimcardController@store')->name('simcard.store');
-Route::post('simcard', 'SimcardController@manual')->name('simcard.manual');
+
 Route::get('simcard', 'SimcardController@index')->name('simcard.index');
 Route::put('simcard/{simcard}', 'SimcardController@update')->name('simcard.update');
 Route::get('simcard/{simcard}/edit', 'SimcardController@edit')->name('simcard.edit');

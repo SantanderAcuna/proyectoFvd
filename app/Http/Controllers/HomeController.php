@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\SimcardImport;
+use App\Simcard;
 use App\User;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class HomeController extends Controller
 {
@@ -18,6 +21,7 @@ class HomeController extends Controller
 
         // solo quiero saber si funciona
     }
+
 
     /**
      * Show the application dashboard.

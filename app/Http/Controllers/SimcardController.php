@@ -37,17 +37,7 @@ class SimcardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function manual(Request $request)
-    {// ingresar simcar de manera manual
-        $sim = new Simcard();
-        $sim->id = $request->imsi;
-        $sim->iccid = 0;
-        $sim->contenido = 'Migracion pospago';
-        $sim->valor = 0;
-        $sim->save();
-        return redirect('simcard')->with('info', 'Simcard para migracion creada');
-    }
-
+ 
 
     public function importarSimcard(Request $request)
     {

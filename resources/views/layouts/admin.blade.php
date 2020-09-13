@@ -78,6 +78,11 @@
                             Inventario
                         </a>
 
+                        <a class="nav-link" href="{{route('migracion.index')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
+                            Ingresar migracion
+                        </a>
+
                         <a class="nav-link" href="{{route('operador.index')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-mobile-alt"></i></div>
                             Operadores

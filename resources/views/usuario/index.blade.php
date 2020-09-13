@@ -16,11 +16,7 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Nombre</th>
-                                    <th>Apellidos</th>
-                                    <th>Cedula</th>
-                                    <th>Direccion</th>
                                     <th>Email</th>
-                                    <th>Telefono</th>
                                     <th>Rol </th>
                                     <th>Accion </th>
                                 </tr>
@@ -31,21 +27,17 @@
                                 <tr>
                                     <td>{{$item->id}}</td>
                                     <td>{{$item->name}}</td>
-                                    <td>{{$item->apellidos}}</td>
-                                    <td>{{$item->cedula}}</td>
-                                    <td>{{$item->direccion}}</td>
                                     <td>{{$item->email}}</td>
-                                    <td>{{$item->telefono}}</td>
                                     <td>{{$item->rol}}</td>
                                     <td class="row">
-                                        <form action="{{route('user.delete', $item->id)}}" method="post" class="ml-3">
+                                        <form style="display: inline;" action="{{route('user.delete', $item->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
 
                                             <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                                         </form>
 
-                                        <a href="{{ route('user.edit',$item->id)}}" class="btn btn-warning btn-sm text-center ml-1">
+                                        <a href="{{ route('user.edit',$item->id)}}" class="btn btn-warning btn-sm text-right ml-1">
                                             Editar
 
                                         </a>

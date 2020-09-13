@@ -1,0 +1,13 @@
+heroku config:add APP_NAME=Laravel
+heroku config:add APP_ENV=production
+heroku config:add APP_KEY=base64:/7DUCLDPKAiolR504AUI3DFC8/gCig4YimDDKq0t5MU=
+heroku config:add APP_DEBUG=false
+heroku config:add APP_URL=urlhttps://stark-anchorage-03029.herokuapp.com/ 
+
+
+heroku config:add DB_CONNECTION=pgsql
+heroku config:add DB_HOST=ec2-54-156-121-142.compute-1.amazonaws.com
+heroku config:add DB_PORT=5422
+heroku config:add DB_DATABASE=de5cd55p7qoorm
+heroku config:add DB_USERNAME=dfvktunyhnvcza
+heroku config:add DB_PASSWORD=8b28797a1f57d677678fee95586c5117b37be171a5d58da101effcf6a5ad1c45 sslmode=require

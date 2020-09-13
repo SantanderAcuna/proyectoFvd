@@ -1,0 +1,13 @@
+APP_NAME=Laravel
+APP_ENV=production
+APP_KEY=base64:/7DUCLDPKAiolR504AUI3DFC8/gCig4YimDDKq0t5MU=
+APP_DEBUG=false
+APP_URL=urlhttps://stark-anchorage-03029.herokuapp.com/ 
+
+
+DB_CONNECTION=pgsql
+DB_HOST=ec2-54-156-121-142.compute-1.amazonaws.com
+DB_PORT=5422
+DB_DATABASE=de5cd55p7qoorm
+DB_USERNAME=dfvktunyhnvcza
+DB_PASSWORD=8b28797a1f57d677678fee95586c5117b37be171a5d58da101effcf6a5ad1c45 sslmode=require

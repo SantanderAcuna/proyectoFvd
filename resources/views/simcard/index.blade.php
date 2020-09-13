@@ -1,0 +1,101 @@
+@extends('layouts.admin')
+@section('content')
+<div class="container-fluid">
+    <div class="row justify-content-center mb-1">
+        <div class="container-fluid mt-3">
+
+            <div class="card mb-3">
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active">Subir inventario</li>
+                            </ol>
+
+                            <form action="{{route ('importar.simcard')}}" method="post" enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group">
+                                    <input type="file" name="file" id="file" class="form-control-file">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Importar</button>
+
+                            </form>
+
+                        </div>
+
+                        <div class="col-md-6 text-center">
+                            <p>
+                                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Migraciones
+                                </a>
+                            </p>
+
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    <form action="{{ route('simcard.manual')}}" method="post">
+                                        @csrf
+                                        <div class="form-group">
+                                            <input type="text" name="imsi" id="imsi" class="form-control text-center" required placeholder="Numero">
+                                        </div>
+
+
+
+                                        <button type="submit" class="btn btn-primary">Crear</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                @include('include.msg')
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table mr-1"></i>
+                    Inventario Chip disponible
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Numero</th>
+                                    <th>iccid</th>
+                                    <th>Contenido</th>
+                                    <th>Valor</th>
+                                    <th>Fecha </th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach($chip as $item)
+                                <tr>
+                                    <td>{{$item->id}}</td>
+                                    <td>{{$item->iccid}}</td>
+                                    <td>{{$item->contenido}}</td>
+                                    <td>{{$item->valor}}</td>
+                                    <td>{{$item->created_at}}</td>
+
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+@endsection

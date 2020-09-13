@@ -105,7 +105,7 @@ class ReporteController extends Controller
         // $reporte = Reporte::all();
         $reporte = Reporte::join('users', 'users.id', '=', 'reportes.user_id')
             ->join('revenues', 'revenues.id', '=', 'reportes.revenue_id')
-            ->righttJoin('tipo_ventas', 'tipo_ventas.id', '=', 'reportes.tipo_venta_id')
+            ->rightJoin('tipo_ventas', 'tipo_ventas.id', '=', 'reportes.tipo_venta_id')
             ->leftJoin('operadors', 'operadors.id', '=', 'reportes.operador_id')
             ->Join('productos', 'productos.id', '=', 'reportes.producto_id')
             ->select('reportes.id','reportes.nombre','reportes.telefono','reportes.documento', 

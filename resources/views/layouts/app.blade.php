@@ -74,7 +74,7 @@
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('register') }}">
+                            <a class="nav-link text-white" href="#">
                                 <img style="width: 40px;" src="{{asset('img/user.svg')}}" alt="">
                             </a>
                         </li>

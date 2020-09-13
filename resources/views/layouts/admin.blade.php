@@ -8,6 +8,15 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Fvd2</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{'FVD 2'}}</title>
+
+    <link rel="shortcut icon" href="{{ asset('img/favcir.ico') }}" type="image/x-icon">
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="{{asset('panel/css/styles.css')}}" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
@@ -121,7 +130,7 @@
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
-                    
+
 
                 </div>
             </nav>

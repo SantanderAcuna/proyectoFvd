@@ -25,6 +25,14 @@ class SimcardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+        // solo quiero saber si funciona
+    }
+
+
     public function index()
     {
         $chip = Simcard::orderBy('created_at', 'desc')->get();

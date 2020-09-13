@@ -30,9 +30,30 @@
         <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('home') }}">
-                <img src="{{asset('img/favcir.ico') }}" style="width: 40px;" alt="Logo">
+                    <img src="{{asset('img/favcir.ico') }}" style="width: 40px;" alt="Logo">
                     <img src="{{asset('img/logo.png') }}" style="width: 210px;" alt="Logo">
                 </a>
+                @if(auth()->check())
+
+                @if(auth()->user()->rol === 'asesor')
+                <a class="navbar-brand " class="text-white" href="{{ url('home') }}">
+
+                    Mis ventas
+                </a>
+
+                @else
+                <a class="navbar-brand " class="text-white" href="{{ url('home') }}">
+
+                    Mis ventas
+                </a>
+
+                <a class="navbar-brand " class="text-white" href="{{ route('reporte.ventas') }}">
+
+                    Panel administrativo
+                </a>
+
+                @endif
+                @endif
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -54,14 +75,14 @@
                         @if (Route::has('register'))
                         <li class="nav-item">
                             <a class="nav-link text-white" href="{{ route('register') }}">
-                            <img style="width: 40px;" src="{{asset('img/user.svg')}}" alt="">
+                                <img style="width: 40px;" src="{{asset('img/user.svg')}}" alt="">
                             </a>
                         </li>
                         @endif
                         @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} {{ Auth::user()->apellidos }}
+                                {{ Auth::user()->name }}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

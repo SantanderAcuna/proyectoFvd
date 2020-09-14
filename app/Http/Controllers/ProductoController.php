@@ -15,7 +15,7 @@ class ProductoController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['auth', 'roles']);
+        $this->middleware('auth');
     }
 
     public function index()

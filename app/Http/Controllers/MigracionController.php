@@ -14,7 +14,7 @@ class MigracionController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(['auth', 'roles']);
+        $this->middleware('auth');
 
         // solo quiero saber si funciona
     }

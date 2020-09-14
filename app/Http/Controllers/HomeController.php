@@ -33,43 +33,6 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function mostrar()
-    {
-        $user = User::all();
-
-        return view('usuario.index', compact('user'));
-    }
-
-    public function destroy($id)
-    {
-        $user = User::findOrFail($id);
-
-        $user->delete();
-
-        return back()->with('info', 'Usuario eliminado');
-    }
-
-
-
-    public function edit($id)
-    {
-        $usuario = User::findOrFail($id);
-
-        return view('usuario.edit', compact('usuario'));
-    }
-
-
-
-    public function update(Request $request, $id)
-    {
-        $usuario = User::findOrFail($id);
-
-        $usuario->rol = $request->rol;
-
-        $usuario->save();
-
-        return redirect('usuario')->with('info', 'Usuario actualizado correctamente');
-    }
-
+  
 
 }

@@ -102,8 +102,8 @@ class ReporteController extends Controller
 
     public function ventas()
     {
-        $reporte = Reporte::all();
-      /*  $reporte = Reporte::join('users', 'users.id', '=', 'reportes.user_id')
+       // $reporte = Reporte::all();
+      $reporte = Reporte::join('users', 'users.id', '=', 'reportes.user_id')
             ->join('revenues', 'revenues.id', '=', 'reportes.revenue_id')
             ->rightJoin('tipo_ventas', 'tipo_ventas.id', '=', 'reportes.tipo_venta_id')
             ->leftJoin('operadors', 'operadors.id', '=', 'reportes.operador_id')
@@ -112,7 +112,7 @@ class ReporteController extends Controller
             'reportes.numero','reportes.iccid', 'users.name as usuario', 'reportes.created_at',
              'productos.nombre as producto', 'operadors.nombre as operador', 'revenues.valor as revenue', 'tipo_ventas.nombre as tipo')
             ->get();
-*/
+
 
         return view('reporte.ventas', compact('reporte'));
     }

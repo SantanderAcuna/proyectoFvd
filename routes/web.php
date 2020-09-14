@@ -19,18 +19,16 @@ Route::post('migracion', 'MigracionController@store')->name('migracion.store');
 Route::resource('simcard', 'SimcardController');
 
 
-Route::post('/', 'SimcardController@importarSimcard')->name('importar.simcard');
+Route::post('simcard', 'SimcardController@importarSimcard')->name('importar.simcard');
 Route::post('simcard', 'SimcardController@store')->name('simcard.store');
 Route::get('simcard', 'SimcardController@index')->name('simcard.index');
 Route::put('simcard/{simcard}', 'SimcardController@update')->name('simcard.update');
 Route::get('simcard/{simcard}/edit', 'SimcardController@edit')->name('simcard.edit');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('usuario', 'UserController@mostrar')->name('listar.usaurios');
-Route::delete('usuario/{id}', 'UserController@destroy')->name('user.delete');
-Route::get('/usuario/{usuario}', 'UserController@edit')->name('user.edit');
-Route::put('usuario/{id}', 'UserController@update')->name('user.update');
+Route::get('usuario', 'HomeController@mostrar')->name('listar.usaurios');
+Route::delete('usuario/{id}', 'HomeController@destroy')->name('user.delete');
+Route::get('/usuario/{usuario}', 'HomeController@edit')->name('user.edit');
+Route::put('usuario/{id}', 'HomeController@update')->name('user.update');
 
 Route::get('reporte', 'ReporteController@ventas')->name('reporte.ventas');
 Route::get('reporte/export/', 'ReporteController@export')->name('export');
@@ -104,4 +102,4 @@ Route::get('simcard/{simcard}/edit', 'SimcardController@edit')->name('simcard.ed
 
 Auth::routes();
 
-
+Route::get('/home', 'HomeController@index')->name('home');

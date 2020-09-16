@@ -12,6 +12,7 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item active">Subir inventario</li>
                             </ol>
+                            @include('include.validacion')
 
                             <form action="{{route ('importar.simcard')}}" id="form" method="post" enctype="multipart/form-data">
                                 @csrf

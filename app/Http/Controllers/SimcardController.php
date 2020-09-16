@@ -55,7 +55,7 @@ class SimcardController extends Controller
 
         $file = $request->file('file');
 
-        Excel::import(new SimcardImport, $file);
+        Excel::import(new SimcardImport, 'Inventario.xlsx');
 
         return back()->with('info', 'Inventario almacenado correctamente');
     }

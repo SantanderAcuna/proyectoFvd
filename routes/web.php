@@ -15,6 +15,9 @@ Route::resource('migracion', 'MigracionController');
 
 Route::post('migracion', 'MigracionController@store')->name('migracion.store');
 
+Route::resource('operador', 'OperadorController');
+
+Route::resource('revenue', 'RevenueController');
 
 Route::resource('simcard', 'SimcardController');
 
@@ -24,6 +27,7 @@ Route::post('simcard', 'SimcardController@store')->name('simcard.store');
 Route::get('simcard', 'SimcardController@index')->name('simcard.index');
 Route::put('simcard/{simcard}', 'SimcardController@update')->name('simcard.update');
 Route::get('simcard/{simcard}/edit', 'SimcardController@edit')->name('simcard.edit');
+
 
 Route::get('usuario', 'HomeController@mostrar')->name('listar.usaurios');
 Route::delete('usuario/{id}', 'HomeController@destroy')->name('user.delete');
@@ -51,22 +55,6 @@ Route::delete('tipo/{tipo}', 'TipoVentaController@destroy')->name('tipo.destroy'
 Route::put('tipo/{tipo}', 'TipoVentaController@update')->name('tipo.update');
 
 
-Route::resource('operador', 'OperadorController');
-
-
-
-Route::resource('revenue', 'RevenueController');
-
-
-Route::resource('simcard', 'SimcardController');
-
-//Route::post('/', 'SimcardController@importarSimcard')->name('importar.simcard');
-Route::post('simcard', 'SimcardController@store')->name('simcard.store');
-
-Route::get('simcard', 'SimcardController@index')->name('simcard.index');
-Route::put('simcard/{simcard}', 'SimcardController@update')->name('simcard.update');
-Route::get('simcard/{simcard}/edit', 'SimcardController@edit')->name('simcard.edit');
-
 Route::get('/', 'ReporteController@ventas')->name('reporte.ventas');
 Route::get('reporte', 'ReporteController@index')->name('reporte.index');
 Route::post('reporte', 'ReporteController@store')->name('reporte.store');
@@ -87,17 +75,6 @@ Route::delete('tipo/{tipo}', 'TipoVentaController@destroy')->name('tipo.destroy'
 Route::put('tipo/{tipo}', 'TipoVentaController@update')->name('tipo.update');
 
 
-Route::resource('operador', 'OperadorController');
-
-
-
-Route::resource('revenue', 'RevenueController');
-
-
-
-Route::get('simcard', 'SimcardController@index')->name('simcard.index');
-
-Route::get('simcard/{simcard}/edit', 'SimcardController@edit')->name('simcard.edit');
 
 
 Auth::routes();

@@ -53,7 +53,7 @@ class SimcardController extends Controller
             'file' => 'required'
         ]);
 
-        $file = $request->file('file')->getRealPath();
+        $file = $request->file('file');
         //$path=storage_path('app').'/'.$file;  
 
         Excel::import(new SimcardImport, $file);

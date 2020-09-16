@@ -8,7 +8,7 @@
                 <div class="card-body">
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item active">Subir inventario</li>
                             </ol>

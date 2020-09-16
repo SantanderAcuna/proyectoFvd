@@ -77,3 +77,8 @@
 </div>
 
 @endsection
+@section('js')
+
+<script src="{{ asset('js/file.js') }}" defer></script>
+
+@endsection

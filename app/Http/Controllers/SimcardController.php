@@ -53,10 +53,11 @@ class SimcardController extends Controller
             'file' => 'required'
         ]);
 
-        //$file = $request->file('file');
+        $file = $request->file('file')->getRealPath();
+        $path=storage_path('app').'/'.$file;  
 
-        //Excel::import(new SimcardImport, $file);
-        Excel::import(new SimcardImport, request()->file('Inventario1.xlsx'));
+        $data = Excel::import(new SimcardImport, $file, $path);
+        //Excel::import(new SimcardImport, request()->file('Inventario1.xlsx'));
         //(new SimcardImport)->import($file, null, \Maatwebsite\Excel\Excel::XLSX);
 
         return back()->with('info', 'Inventario almacenado correctamente');

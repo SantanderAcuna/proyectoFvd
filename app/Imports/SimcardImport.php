@@ -16,10 +16,10 @@ class SimcardImport implements ToModel
     public function model(array $row)
     {
         return new Simcard([
-            'id'     => $row[0],
-            'iccid'    => $row[1],
-            'contenido'    => $row[2],
-            'valor'    => $row[3],
+            'id' => $row[0],
+            'iccid' => $row[1],
+            'contenido' => $row[2],
+            'valor' => $row[3],
         ]);
     }
 }

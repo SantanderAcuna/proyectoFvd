@@ -17,7 +17,7 @@
                             <form action="{{route ('importar.simcard')}}" id="form" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="file" name="archivo" id="archivo" class="form-control-file">
+                                    <input type="file" name="archivo" id="file" class="form-control-file">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Importar</button>
 
@@ -25,7 +25,7 @@
 
                         </div>
 
-
+                      
 
                     </div>
 

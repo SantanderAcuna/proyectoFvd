@@ -50,7 +50,7 @@ class SimcardController extends Controller
     public function importarSimcard(Request $request)
     {
         $request->validate([
-            'archivo' => 'required'
+            'file' => 'required'
         ]);
 
         $file = $request->file('file');

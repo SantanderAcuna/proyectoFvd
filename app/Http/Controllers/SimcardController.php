@@ -51,6 +51,9 @@ class SimcardController extends Controller
     {
         $file = $request->file('file');
         
+        if ($file === '') {
+            return back()->with('error', 'Suba un archivo de excel con la extension xls');
+        }
         Excel::import(new SimcardImport, $file);
 
         return back()->with('info', 'Inventario almacenado correctamente');

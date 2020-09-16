@@ -13,7 +13,7 @@ window.addEventListener('load', function () {
  
 
 
-    if (file == "") {
+    if (file) {
 
       alert('No hay archivo seleccionado');
 

@@ -22,7 +22,7 @@ Route::resource('revenue', 'RevenueController');
 Route::resource('simcard', 'SimcardController');
 
 
-Route::post('simcard', 'SimcardController@importarSimcard')->name('importar.simcard');
+Route::post('/', 'SimcardController@importarSimcard')->name('importar.simcard');
 Route::post('simcard', 'SimcardController@store')->name('simcard.store');
 Route::get('simcard', 'SimcardController@index')->name('simcard.index');
 Route::put('simcard/{simcard}', 'SimcardController@update')->name('simcard.update');

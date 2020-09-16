@@ -14,7 +14,7 @@
                             </ol>
                             @include('include.validacion')
 
-                            <form action="{{route ('importar.simcard')}}" id="form" method="post" enctype="multipart/form-data">
+                            <form action="{{route('importar.simcard')}}" id="form" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <input type="file" name="file" id="file" class="form-control-file">

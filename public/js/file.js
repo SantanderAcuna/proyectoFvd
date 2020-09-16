@@ -2,7 +2,7 @@ window.addEventListener('load', function () {
 
   const formulario = document.querySelector('#form');
 
-  //console.log(cedula);
+  console.log(formulario);
 
 
   formulario.addEventListener('submit', function (e) {
@@ -22,7 +22,7 @@ window.addEventListener('load', function () {
     }
 
 
-    console.log('No hay archivo seleccionado');
+    console.log('Se puede subir archivo seleccionado');
 
 
   })

@@ -15,6 +15,11 @@ class SimcardImport implements ToModel
      */
     public function model(array $row)
     {
+        if (!isset($row[0])) {
+
+            return null;
+        }
+
         return new Simcard([
             'id' => $row[0],
             'iccid' => $row[1],

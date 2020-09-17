@@ -46,8 +46,7 @@ class ExcelController extends Controller
                 'tipo_ventas.nombre as tipo'
             )
             ->where('created_at', '=', 'reportes.created_at')
-            ->orderBy('created_at', 'DESC')
-           ->get();
+            ->get();
 
         return view('asesor.ventadia', compact('venta'));
     }

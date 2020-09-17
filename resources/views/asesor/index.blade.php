@@ -10,9 +10,9 @@
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead class="text-center">
                 <tr>
+                    <th>Asesor</th>
                     <th>Imsi</th>
                     <th>Iccid</th>
-                    <th>Asesor</th>
                     <th>Documento</th>
                     <th>Nombre</th>
                     <th>Telefono</th>
@@ -27,9 +27,9 @@
             <tbody class="text-center">
                 @foreach($venta as $item)
                 <tr>
+                    <td>{{$item->usuario}}</td>
                     <td>{{$item->numero}}</td>
                     <td>{{$item->iccid}}</td>
-                    <td>{{$item->usuario}}</td>
                     <td>{{$item->documento}}</td>
                     <td>{{$item->nombre}}</td>
                     <td>{{$item->telefono}}</td>

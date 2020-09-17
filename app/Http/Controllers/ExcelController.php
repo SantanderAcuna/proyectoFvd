@@ -30,7 +30,7 @@ class ExcelController extends Controller
         
          ->get();
 
-        return view('reporte.ventadia', compact('venta'));
+        return view('asesor.ventadia', compact('venta'));
         
     }
 

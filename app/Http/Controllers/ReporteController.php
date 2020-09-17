@@ -95,6 +95,7 @@ class ReporteController extends Controller
             ->leftJoin('operadors', 'operadors.id', '=', 'reportes.operador_id')
             ->Join('productos', 'productos.id', '=', 'reportes.producto_id')
             ->select('reportes.id', 'users.name as usuario', 'productos.nombre', 'operadors.nombre as operador', 'revenues.valor as revenue', 'tipo_ventas.nombre as tipo')
+            ->orderBy('created_at','DESC')
             ->get();
 
         return view('reporte.ventas', compact('reporte'));

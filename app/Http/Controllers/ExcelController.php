@@ -27,17 +27,7 @@ class ExcelController extends Controller
         $fecha->day;
 
         $venta = Reporte::whereDay('created_at', '=', $fecha)
-            ->join('users', 'users.id', '=', 'reportes.user_id')
-            ->select(
 
-                'reportes.nombre',
-                'reportes.telefono',
-                'reportes.documento',
-                'reportes.numero',
-                'reportes.iccid',
-                'users.name as usuario',
-                'reportes.created_at',
-            )
             ->get();
 
         return view('asesor.ventadia', compact('venta'));

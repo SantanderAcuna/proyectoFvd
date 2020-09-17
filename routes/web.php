@@ -40,7 +40,7 @@ Route::middleware(['auth', 'roles'])->group(function () {
     Route::get('/', 'ReporteController@ventas')->name('reporte.ventas');
     Route::get('reporte/export/', 'ReporteController@export')->name('export');
     Route::get('reporte', 'ReporteController@index')->name('reporte.index');
-    Route::post('reporte', 'ReporteController@store')->name('reporte.store');
+   
     Route::get('reporte/{reporte}/edit', 'ReporteController@edit')->name('reporte.edit');
     Route::delete('reporte/{reporte}', 'ReporteController@destroy')->name('reporte.destroy');
     
@@ -66,6 +66,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('asesor', 'ExcelController@misVentas')->name('mis.ventas');
 Route::post('simcard', 'SimcardController@store')->name('simcard.store');
 Route::get('simcard', 'SimcardController@index')->name('simcard.index');
+Route::post('reporte', 'ReporteController@store')->name('reporte.store');
 
 
 

@@ -27,10 +27,6 @@
                                 <th>Documento</th>
                                 <th>Nombre</th>
                                 <th>Telefono</th>
-                                <th>Revenue</th>
-                                <th>Tipo</th>
-                                <th>Operador</th>
-                                <th>Producto</th>
                                 <th>Fecha</th>
                             </tr>
                         </thead>
@@ -44,10 +40,7 @@
                                 <td>{{$item->documento}}</td>
                                 <td>{{$item->nombre}}</td>
                                 <td>{{$item->telefono}}</td>
-                                <td>{{$item->revenue}}</td>
-                                <td>{{$item->tipo}}</td>
-                                <td>{{$item->operador}}</td>
-                                <td>{{$item->producto}}</td>
+                                
                                 <td>{{$item->created_at}}</td>
 
 

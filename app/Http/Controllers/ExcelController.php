@@ -136,7 +136,9 @@ class ExcelController extends Controller
                 'operadors.nombre as operador',
                 'revenues.valor as revenue',
                 'tipo_ventas.nombre as tipo'
-            )->get();
+            )
+            ->orderBy('created_at','DESC')
+            ->get();
 
         return view('asesor.index', compact('venta'));
     }

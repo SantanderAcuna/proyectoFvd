@@ -28,14 +28,14 @@ Route::get('simcard', 'SimcardController@index')->name('simcard.index');
 Route::put('simcard/{simcard}', 'SimcardController@update')->name('simcard.update');
 Route::get('simcard/{simcard}/edit', 'SimcardController@edit')->name('simcard.edit');
 
-
+Route::get('asesor', 'HomeController@misVentas')->name('mis.ventas');
 Route::get('usuario', 'HomeController@mostrar')->name('listar.usaurios');
 Route::delete('usuario/{id}', 'HomeController@destroy')->name('user.delete');
 Route::get('/usuario/{usuario}', 'HomeController@edit')->name('user.edit');
 Route::put('usuario/{id}', 'HomeController@update')->name('user.update');
 
 Route::get('reporte', 'ReporteController@ventas')->name('reporte.ventas');
-Route::get('asesor', 'HomeController@misVentas')->name('mis.ventas');
+
 Route::get('reporte/export/', 'ReporteController@export')->name('export');
 Route::get('reporte', 'ReporteController@index')->name('reporte.index');
 Route::post('reporte', 'ReporteController@store')->name('reporte.store');

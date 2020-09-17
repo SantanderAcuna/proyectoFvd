@@ -6,6 +6,7 @@ use App\Imports\SimcardImport;
 use App\Reporte;
 use App\Simcard;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -25,7 +26,11 @@ class HomeController extends Controller
 
     public function misVentas()
     {
+        $date = Carbon::now();
+        $date = $date->format('m');
+
         $venta = Reporte::where('user_id', '=', auth()->user()->id)
+        ->orwhere(now(),'=', 'created_at')
             ->join('users', 'users.id', '=', 'reportes.user_id')
             ->join('revenues', 'revenues.id', '=', 'reportes.revenue_id')
             ->rightJoin('tipo_ventas', 'tipo_ventas.id', '=', 'reportes.tipo_venta_id')

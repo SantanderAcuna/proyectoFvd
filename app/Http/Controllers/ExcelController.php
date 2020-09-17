@@ -28,11 +28,7 @@ class ExcelController extends Controller
 
         $venta = Reporte::whereDay('created_at', '=', $fecha)
         ->join('users', 'users.id', '=', 'reportes.user_id')
-            ->join('revenues', 'revenues.id', '=', 'reportes.revenue_id')
-            ->rightJoin('tipo_ventas', 'tipo_ventas.id', '=', 'reportes.tipo_venta_id')
-            ->leftJoin('operadors', 'operadors.id', '=', 'reportes.operador_id')
-            ->Join('productos', 'productos.id', '=', 'reportes.producto_id')
-            ->select(
+        ->select(
                 'reportes.id',
                 'reportes.nombre',
                 'reportes.telefono',

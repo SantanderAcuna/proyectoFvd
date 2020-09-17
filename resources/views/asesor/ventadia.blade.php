@@ -34,7 +34,7 @@
                         <tbody class="text-center">
                             @foreach($venta as $item)
                             <tr>
-                            <td>{{$item->user-id}}</td>
+                            <td>{{$item->user_id}}</td>
                                 <td>{{$item->numero}}</td>
                                 <td>{{$item->iccid}}</td>
                                 <td>{{$item->documento}}</td>

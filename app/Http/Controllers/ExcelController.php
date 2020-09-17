@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Imports\SimcardImport;
 use App\Reporte;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -27,8 +28,7 @@ class ExcelController extends Controller
         $fecha = Carbon::parse(now());
         $fecha->day;
 
-        $venta = DB::table('users')
-            ->select(DB::raw('name, (SELECT COUNT(id) FROM reportes WHERE users.id = reportes.user_id) AS "venta"'))
+        $venta = User::select(DB::raw('name, (SELECT COUNT(id) FROM reportes WHERE users.id = reportes.user_id) AS "venta"'))
             ->get();
 
 

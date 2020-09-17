@@ -27,10 +27,9 @@ class HomeController extends Controller
     public function misVentas()
     {
         $date = Carbon::now();
-        $date = $date->format('m');
-
+        
         $venta = Reporte::where('user_id', '=', auth()->user()->id)
-        ->orwhere(now(),'=', 'created_at')
+        ->orwhere('created_at','=', $date)
             ->join('users', 'users.id', '=', 'reportes.user_id')
             ->join('revenues', 'revenues.id', '=', 'reportes.revenue_id')
             ->rightJoin('tipo_ventas', 'tipo_ventas.id', '=', 'reportes.tipo_venta_id')

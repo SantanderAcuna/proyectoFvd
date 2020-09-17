@@ -28,7 +28,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
-            <div class="container">
+            <div class="container text-white">
                 <a class="navbar-brand" href="{{ url('home') }}">
                     <img src="{{asset('img/favcir.ico') }}" style="width: 40px;" alt="Logo">
                     <img src="{{asset('img/logo.png') }}" style="width: 210px;" alt="Logo">

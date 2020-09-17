@@ -2,11 +2,9 @@
 @section('content')
 <div class="card-body">
 
-<p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                       Mis ventas 
-                    </a>
-                </p>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active">Mis ventas</li>
+    </ol>
 
     <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

@@ -25,7 +25,7 @@ class ExcelController extends Controller
     {
         $fecha = Carbon::parse('created_at');
 
-        dd($fecha);
+        var_dump($fecha);
 
         $venta = Reporte::whereDay('created_at', date('d'))
         ->join('users', 'users.id', '=', 'reportes.user_id')

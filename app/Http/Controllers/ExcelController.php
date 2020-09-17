@@ -139,7 +139,7 @@ class ExcelController extends Controller
                 'tipo_ventas.nombre as tipo'
             )->get();
 
-        return view('asesor', compact('venta'));
+        return view('asesor.index', compact('venta'));
     }
 
 

@@ -55,11 +55,11 @@ Route::delete('tipo/{tipo}', 'TipoVentaController@destroy')->name('tipo.destroy'
 Route::put('tipo/{tipo}', 'TipoVentaController@update')->name('tipo.update')->middleware(['roles']);
 
 
-Route::get('/', 'ReporteController@ventas')->name('reporte.ventas')->middleware(['roles']);
-Route::get('reporte', 'ReporteController@index')->name('reporte.index')->middleware(['roles']);
-Route::post('reporte', 'ReporteController@store')->name('reporte.store')->middleware(['roles']);
-Route::get('reporte/{reporte}/edit', 'ReporteController@edit')->name('reporte.edit')->middleware(['roles']);
-Route::delete('reporte/{reporte}', 'ReporteController@destroy')->name('reporte.destroy')->middleware(['roles']);
+//Route::get('/', 'ReporteController@ventas')->name('reporte.ventas')->middleware(['roles']);
+//Route::get('reporte', 'ReporteController@index')->name('reporte.index')->middleware(['roles']);
+//Route::post('reporte', 'ReporteController@store')->name('reporte.store');
+//Route::get('reporte/{reporte}/edit', 'ReporteController@edit')->name('reporte.edit')->middleware(['roles']);
+//Route::delete('reporte/{reporte}', 'ReporteController@destroy')->name('reporte.destroy')->middleware(['roles']);
 
 
 

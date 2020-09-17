@@ -36,7 +36,7 @@ Route::middleware(['auth', 'roles'])->group(function () {
     Route::get('/usuario/{usuario}', 'HomeController@edit')->name('user.edit');
     Route::put('usuario/{id}', 'HomeController@update')->name('user.update');
 
-    Route::get('reporte', 'SimcardController@ventasDia')->name('venta.dia');
+    Route::get('asesor', 'AsesorController@ventasDia')->name('venta.dia');
     Route::get('/', 'ReporteController@ventas')->name('reporte.ventas');
     Route::get('reporte/export/', 'ReporteController@export')->name('export');
     Route::get('reporte', 'ReporteController@index')->name('reporte.index');

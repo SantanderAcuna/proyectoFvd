@@ -27,9 +27,9 @@ class ExcelController extends Controller
         $fecha->day;
 
         $venta = Reporte::whereDay('created_at', '=', $fecha)
-        ->join('users', 'users.id', '=', 'reportes.user_id')
-        ->select(
-                'reportes.id',
+            ->join('users', 'users.id', '=', 'reportes.user_id')
+            ->select(
+
                 'reportes.nombre',
                 'reportes.telefono',
                 'reportes.documento',
@@ -37,15 +37,10 @@ class ExcelController extends Controller
                 'reportes.iccid',
                 'users.name as usuario',
                 'reportes.created_at',
-                'productos.nombre as producto',
-                'operadors.nombre as operador',
-                'revenues.valor as revenue',
-                'tipo_ventas.nombre as tipo'
             )
-         ->get();
+            ->get();
 
         return view('asesor.ventadia', compact('venta'));
-        
     }
 
 
@@ -77,11 +72,11 @@ class ExcelController extends Controller
         return back()->with('info', 'Inventario almacenado correctamente');
     }
 
-   
+
     public function misVentas()
     {
         $date = Carbon::now();
-        
+
         $venta = Reporte::where('user_id', '=', auth()->user()->id)
             ->join('users', 'users.id', '=', 'reportes.user_id')
             ->join('revenues', 'revenues.id', '=', 'reportes.revenue_id')
@@ -102,12 +97,9 @@ class ExcelController extends Controller
                 'revenues.valor as revenue',
                 'tipo_ventas.nombre as tipo'
             )
-            ->orderBy('created_at','DESC')
+            ->orderBy('created_at', 'DESC')
             ->get();
 
         return view('asesor.index', compact('venta'));
     }
-
-
-
 }

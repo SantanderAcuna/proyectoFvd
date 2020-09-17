@@ -29,7 +29,7 @@ class ReporteController extends Controller
     {
     }
 
-    public function ventasDia()
+    public function venasesor()
     {
 
         $venta = Reporte::whereDay('created_at', date('d'))

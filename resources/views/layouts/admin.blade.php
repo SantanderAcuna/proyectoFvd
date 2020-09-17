@@ -76,7 +76,7 @@
                             Registrar ventas
                         </a>
 
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('venta.dia')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
                             Ventas hoy
                         </a>

@@ -112,7 +112,8 @@ class ReporteController extends Controller
             ->select('reportes.id','reportes.nombre','reportes.telefono','reportes.documento', 
             'reportes.numero','reportes.iccid', 'users.name as usuario', 'reportes.created_at',
              'productos.nombre as producto', 'operadors.nombre as operador', 'revenues.valor as revenue', 'tipo_ventas.nombre as tipo')
-            ->get();
+             ->orderBy('created_at','DESC')
+             ->get();
 
 
         return view('reporte.ventas', compact('reporte'));

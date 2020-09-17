@@ -26,7 +26,7 @@ Route::resource('simcard', 'SimcardController');
 Route::middleware(['auth', 'roles'])->group(function () {
 
 
-    Route::get('/', 'ExcelController@asesordia')->name('asesor.dia');
+    Route::get('asesor/ventadia', 'ExcelController@asesordia')->name('asesor.dia');
 
     Route::post('/', 'SimcardController@importarSimcard')->name('importar.simcard');
 

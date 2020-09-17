@@ -37,7 +37,7 @@
                     <td>{{$item->tipo}}</td>
                     <td>{{$item->operador}}</td>
                     <td>{{$item->producto}}</td>
-                    <td>{{$item->carbon::now(created_at)}}</td>
+                    <td>{{$item->created_at}}</td>
 
 
                 </tr>

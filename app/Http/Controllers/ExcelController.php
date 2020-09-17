@@ -28,7 +28,7 @@ class ExcelController extends Controller
         $fecha = Carbon::parse(now());
         $fecha->day;
 
-        $venta = User::select(DB::raw('name, (SELECT COUNT(id) FROM reportes WHERE users.id = reportes.user_id) AS "venta"'))
+        $venta = User::select(DB::raw('name, (SELECT COUNT(id) FROM reportes WHERE user.id = reportes.user_id) AS "venta"'))
             ->get();
 
 

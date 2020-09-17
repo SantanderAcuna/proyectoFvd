@@ -23,12 +23,12 @@ Route::resource('simcard', 'SimcardController');
 
 
 Route::post('/', 'SimcardController@importarSimcard')->name('importar.simcard')->middleware(['roles']);
-Route::post('simcard', 'SimcardController@store')->name('simcard.store')->middleware(['asesor','roles']);
-Route::get('simcard', 'SimcardController@index')->name('simcard.index')->middleware(['asesor','roles']);
+Route::post('simcard', 'SimcardController@store')->name('simcard.store');
+Route::get('simcard', 'SimcardController@index')->name('simcard.index');
 Route::put('simcard/{simcard}', 'SimcardController@update')->name('simcard.update')->middleware(['roles']);
 Route::get('simcard/{simcard}/edit', 'SimcardController@edit')->name('simcard.edit')->middleware(['roles']);
 
-Route::get('asesor', 'ExcelController@misVentas')->name('mis.ventas')->middleware(['asesor','roles']);
+Route::get('asesor', 'ExcelController@misVentas')->name('mis.ventas')->middleware('asesor');
 Route::get('usuario', 'HomeController@mostrar')->name('listar.usaurios')->middleware(['roles']);
 Route::delete('usuario/{id}', 'HomeController@destroy')->name('user.delete')->middleware(['roles']);
 Route::get('/usuario/{usuario}', 'HomeController@edit')->name('user.edit')->middleware(['roles']);

@@ -118,7 +118,7 @@ class ExcelController extends Controller
         $date = Carbon::now();
         
         $venta = Reporte::where('user_id', '=', auth()->user()->id)
-      
+        ->orwhere('created_at','=', $date)
             ->join('users', 'users.id', '=', 'reportes.user_id')
             ->join('revenues', 'revenues.id', '=', 'reportes.revenue_id')
             ->rightJoin('tipo_ventas', 'tipo_ventas.id', '=', 'reportes.tipo_venta_id')

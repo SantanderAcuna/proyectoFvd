@@ -41,7 +41,7 @@
                     Mis ventas
                 </a>
 
-                <a class="navbar-brand text-white" href="{{ url('home') }}">
+                <a class="nav-item text-white" href="{{ url('home') }}">
 
                     Reportar venta
                 </a>

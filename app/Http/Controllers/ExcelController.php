@@ -45,7 +45,7 @@ class ExcelController extends Controller
                 'revenues.valor as revenue',
                 'tipo_ventas.nombre as tipo'
             )
-            ->whereDay('created_at', '=', $fecha)
+            ->whereDay('created_at', '=', 'reportes.created_at')
             ->orderBy('created_at', 'DESC')
            ->get();
 

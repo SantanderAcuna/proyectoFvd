@@ -45,7 +45,7 @@ class ExcelController extends Controller
                 'revenues.valor as revenue',
                 'tipo_ventas.nombre as tipo'
             )
-            ->where('created_at', '=', 'reportes.created_at')
+            ->where('reportes.created_at', '=', 'reportes.created_at')
             ->get();
 
         return view('asesor.ventadia', compact('venta'));

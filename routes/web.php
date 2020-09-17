@@ -38,7 +38,7 @@ Route::get('reporte', 'ReporteController@ventas')->name('reporte.ventas')->middl
 
 Route::get('reporte/export/', 'ReporteController@export')->name('export')->middleware(['roles']);
 Route::get('reporte', 'ReporteController@index')->name('reporte.index')->middleware(['roles']);
-Route::post('reporte', 'ReporteController@store')->name('reporte.store')->middleware(['roles']);
+Route::post('reporte', 'ReporteController@store')->name('reporte.store');
 Route::get('reporte/{reporte}/edit', 'ReporteController@edit')->name('reporte.edit')->middleware(['roles']);
 Route::delete('reporte/{reporte}', 'ReporteController@destroy')->name('reporte.destroy')->middleware(['roles']);
 

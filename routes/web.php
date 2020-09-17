@@ -35,7 +35,7 @@ Route::get('/usuario/{usuario}', 'HomeController@edit')->name('user.edit');
 Route::put('usuario/{id}', 'HomeController@update')->name('user.update');
 
 Route::get('reporte', 'ReporteController@ventas')->name('reporte.ventas');
-Route::get('/', 'ReporteController@misVentas')->name('mis.ventas');
+Route::get('home/', 'ReporteController@misVentas')->name('mis.ventas');
 Route::get('reporte/export/', 'ReporteController@export')->name('export');
 Route::get('reporte', 'ReporteController@index')->name('reporte.index');
 Route::post('reporte', 'ReporteController@store')->name('reporte.store');

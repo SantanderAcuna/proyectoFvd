@@ -28,7 +28,7 @@ class ExcelController extends Controller
         $fecha->day;
 
         $teams = DB::table('users')
-            ->select(DB::raw('numero, iccid, (SELECT COUNT(id) FROM reportes WHERE users.id = reportes.user_id) AS "venta"'))
+            ->select(DB::raw('name, (SELECT COUNT(id) FROM reportes WHERE users.id = reportes.user_id) AS "venta"'))
             ->get();
 
 

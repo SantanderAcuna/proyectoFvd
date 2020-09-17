@@ -37,7 +37,7 @@
                     <td>{{$item->tipo}}</td>
                     <td>{{$item->operador}}</td>
                     <td>{{$item->producto}}</td>
-                    <td>{{$item->reated_at}}</td>
+                    <td>{{$item->created_at}}</td>
 
 
                 </tr>

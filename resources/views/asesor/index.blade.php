@@ -2,6 +2,12 @@
 @section('content')
 <div class="card-body">
 
+<p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                       Mis ventas 
+                    </a>
+                </p>
+
     <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead class="text-center">

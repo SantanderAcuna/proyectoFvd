@@ -36,23 +36,23 @@
                 @if(auth()->check())
 
                 @if(auth()->user()->rol === 'asesor')
-                <a class="navbar-brand " class="text-white" href="{{ route('mis.ventas')}}">
+                <a class="navbar-brand " class="text text-white" href="{{ route('mis.ventas')}}">
 
                     Mis ventas
                 </a>
 
-                <a class="navbar-brand " class="text-white" href="{{ url('home') }}">
+                <a class="navbar-brand " class="text text-white" href="{{ url('home') }}">
 
                     Reportar venta
                 </a>
 
                 @else
-                <a class="navbar-brand " class="text-white" href="{{ url('home') }}">
+                <a class="navbar-brand " class="text text-white" href="{{ url('home') }}">
 
                     Mis ventas
                 </a>
 
-                <a class="navbar-brand " class="text-white" href="{{ route('reporte.ventas') }}">
+                <a class="navbar-brand " class="text text-white" href="{{ route('reporte.ventas') }}">
 
                     Panel administrativo
                 </a>

@@ -41,6 +41,11 @@
                     Mis ventas
                 </a>
 
+                <a class="navbar-brand " class="text-white" href="{{ url('home') }}">
+
+                    Reportar venta
+                </a>
+
                 @else
                 <a class="navbar-brand " class="text-white" href="{{ url('home') }}">
 

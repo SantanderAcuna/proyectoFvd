@@ -55,7 +55,7 @@ Route::middleware(['auth', 'roles'])->group(function () {
     Route::get('tipo/{tipo}/edit', 'TipoVentaController@edit')->name('tipo.edit');
     Route::delete('tipo/{tipo}', 'TipoVentaController@destroy')->name('tipo.destroy');
     Route::put('tipo/{tipo}', 'TipoVentaController@update')->name('tipo.update');
-    Route::post('simcard', 'SimcardController@store')->name('simcard.store');
+ Route::get('simcard', 'SimcardController@index')->name('simcard.index');
 });
 
 
@@ -65,7 +65,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('asesor', 'ExcelController@misVentas')->name('mis.ventas');
-Route::get('simcard', 'SimcardController@index')->name('simcard.index');
+Route::post('simcard', 'SimcardController@store')->name('simcard.store');
 Route::post('reporte', 'ReporteController@store')->name('reporte.store');
 
 

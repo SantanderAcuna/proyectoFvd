@@ -140,4 +140,32 @@ class SimcardController extends Controller
     {
         //
     }
+
+
+    public function ventasDia()
+    {
+
+        $venta = Reporte::whereDay('created_at', date('d'))
+        ->join('revenues', 'revenues.id', '=', 'reportes.revenue_id')
+        ->rightJoin('tipo_ventas', 'tipo_ventas.id', '=', 'reportes.tipo_venta_id')
+        ->leftJoin('operadors', 'operadors.id', '=', 'reportes.operador_id')
+        ->Join('productos', 'productos.id', '=', 'reportes.producto_id')
+        ->select(
+            'reportes.id',
+            'reportes.nombre',
+            'reportes.telefono',
+            'reportes.documento',
+            'reportes.numero',
+            'reportes.iccid',
+            'users.name as usuario',
+            'reportes.created_at',
+            'productos.nombre as producto',
+            'operadors.nombre as operador',
+            'revenues.valor as revenue',
+            'tipo_ventas.nombre as tipo'
+        ) ->get();
+
+        return view('reporte.venta-dia', compact('venta'));
+        
+    }
 }

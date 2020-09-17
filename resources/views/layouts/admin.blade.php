@@ -76,6 +76,11 @@
                             Registrar ventas
                         </a>
 
+                        <a class="nav-link" href="{{route('ventasDia')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
+                            Ventas hoy
+                        </a>
+
                         <a class="nav-link" href="{{ route('reporte.ventas')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
                             Ventas
@@ -85,6 +90,8 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
                             Inventario
                         </a>
+
+                       
 
                         <a class="nav-link" href="{{route('migracion.index')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>

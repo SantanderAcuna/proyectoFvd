@@ -6,6 +6,7 @@ use App\Imports\SimcardImport;
 use App\Reporte;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ExcelController extends Controller
@@ -26,7 +27,12 @@ class ExcelController extends Controller
         $fecha = Carbon::parse(now());
         $fecha->day;
 
-        $venta = Reporte::join('users', 'users.id', '=', 'reportes.user_id')
+        $teams = DB::table('users')
+            ->select(DB::raw('numero, iccid, (SELECT COUNT(id) FROM reportes WHERE users.id = reportes.user_id) AS "venta"'))
+            ->get();
+
+
+        /*  $venta = Reporte::join('users', 'users.id', '=', 'reportes.user_id')
             ->join('revenues', 'revenues.id', '=', 'reportes.revenue_id')
             ->rightJoin('tipo_ventas', 'tipo_ventas.id', '=', 'reportes.tipo_venta_id')
             ->leftJoin('operadors', 'operadors.id', '=', 'reportes.operador_id')
@@ -46,7 +52,7 @@ class ExcelController extends Controller
                 'tipo_ventas.nombre as tipo'
             )
             ->where('reportes.created_at', '=', 'reportes.created_at')
-            ->get();
+            ->get();*/
 
         return view('asesor.ventadia', compact('venta'));
     }

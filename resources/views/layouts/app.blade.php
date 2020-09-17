@@ -36,16 +36,15 @@
                 @if(auth()->check())
 
                 @if(auth()->user()->rol === 'asesor')
-                <a class="navbar-brand text-white"  href="{{ route('mis.ventas')}}">
-
-                    Mis ventas
-                </a>
-
                 <a class="navbar-brand text-white" href="{{ url('home') }}">
 
                     Reportar venta
                 </a>
 
+                <a class="navbar-brand text-white" href="{{ route('mis.ventas')}}">
+
+                    Mis ventas
+                </a>
                 @else
                 <a class="navbar-brand text-white" href="{{ url('home') }}">
 

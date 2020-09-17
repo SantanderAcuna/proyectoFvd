@@ -50,7 +50,7 @@ class HomeController extends Controller
                 'tipo_ventas.nombre as tipo'
             )->get();
 
-        return view('asesor.index', compact('venta'));
+        return view('asesor', compact('venta'));
     }
 
 

@@ -21,7 +21,7 @@ class ExcelController extends Controller
     }
 
 
-    public function venasesor()
+    public function asesordia()
     {
 
         $venta = Reporte::whereDay('created_at', date('d'))
@@ -44,7 +44,7 @@ class ExcelController extends Controller
             'tipo_ventas.nombre as tipo'
         ) ->get();
 
-        return view('reporte.venta-dia', compact('venta'));
+        return view('reporte.ventadia', compact('venta'));
         
     }
 

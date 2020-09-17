@@ -23,11 +23,9 @@ class ExcelController extends Controller
 
     public function asesordia()
     {
-        $fecha = Carbon::parse('created_at');
-
         
 
-        $venta = Reporte::whereDay($fecha->day(), date('d'))
+        $venta = Reporte::whereDay('created_at', now())
         ->join('users', 'users.id', '=', 'reportes.user_id')
         ->join('revenues', 'revenues.id', '=', 'reportes.revenue_id')
         ->rightJoin('tipo_ventas', 'tipo_ventas.id', '=', 'reportes.tipo_venta_id')

@@ -28,7 +28,7 @@ Route::get('simcard', 'SimcardController@index')->name('simcard.index');
 Route::put('simcard/{simcard}', 'SimcardController@update')->name('simcard.update');
 Route::get('simcard/{simcard}/edit', 'SimcardController@edit')->name('simcard.edit');
 
-Route::get('asesor', 'HomeController@misVentas')->name('mis.ventas');
+Route::get('asesor', 'ExcelController@misVentas')->name('mis.ventas');
 Route::get('usuario', 'HomeController@mostrar')->name('listar.usaurios');
 Route::delete('usuario/{id}', 'HomeController@destroy')->name('user.delete');
 Route::get('/usuario/{usuario}', 'HomeController@edit')->name('user.edit');

@@ -25,7 +25,6 @@ class HomeController extends Controller
 
     public function misVentas()
     {
-
         $venta = Reporte::where('user_id', '=', auth()->user()->id)
             ->join('users', 'users.id', '=', 'reportes.user_id')
             ->join('revenues', 'revenues.id', '=', 'reportes.revenue_id')

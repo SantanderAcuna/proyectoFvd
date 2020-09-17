@@ -12,7 +12,7 @@ use App\Exports\ReporteExport;
 use FilenameFilter;
 use Maatwebsite\Excel\Facades\Excel;
 
-class ReporteController extends Controller
+class AsesorController extends Controller
 {
     /**
      * Display a listing of the resource.

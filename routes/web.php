@@ -25,6 +25,9 @@ Route::resource('simcard', 'SimcardController');
 
 Route::middleware(['auth', 'roles'])->group(function () {
 
+
+    Route::get('asesor', 'AsesorController@venasesor')->name('venta.dia');
+
     Route::post('/', 'SimcardController@importarSimcard')->name('importar.simcard');
 
     Route::put('simcard/{simcard}', 'SimcardController@update')->name('simcard.update');
@@ -36,7 +39,7 @@ Route::middleware(['auth', 'roles'])->group(function () {
     Route::get('/usuario/{usuario}', 'HomeController@edit')->name('user.edit');
     Route::put('usuario/{id}', 'HomeController@update')->name('user.update');
 
-    Route::get('reporte', 'ReporteController@ventasDia')->name('venta.dia');
+   
     Route::get('/', 'ReporteController@ventas')->name('reporte.ventas');
     Route::get('reporte/export/', 'ReporteController@export')->name('export');
     Route::get('reporte', 'ReporteController@index')->name('reporte.index');

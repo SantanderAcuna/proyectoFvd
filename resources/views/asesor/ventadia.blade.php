@@ -40,7 +40,6 @@
                                 <td>{{$item->documento}}</td>
                                 <td>{{$item->nombre}}</td>
                                 <td>{{$item->telefono}}</td>
-                                
                                 <td>{{$item->created_at}}</td>
 
 
@@ -50,7 +49,7 @@
                     </table>
                 </div>
             </div>
-        </div>
+    
     </div>
 </div>
 

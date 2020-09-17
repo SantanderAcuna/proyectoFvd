@@ -21,7 +21,7 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead class="text-center">
                             <tr>
-                            <th>User</th>
+                            <th>Usuario</th>
                                 <th>Imsi</th>
                                 <th>Iccid</th>
                                 <th>Documento</th>
@@ -34,7 +34,7 @@
                         <tbody class="text-center">
                             @foreach($venta as $item)
                             <tr>
-                            <td>{{auth()->user()->name}}</td>
+                            <td>{{usuario}}</td>
                                 <td>{{$item->numero}}</td>
                                 <td>{{$item->iccid}}</td>
                                 <td>{{$item->documento}}</td>

@@ -122,7 +122,7 @@ class ReporteController extends Controller
 
         $venta = Reporte::where('user_id', '=', auth()->user()->id)->get();
 
-        return view('asesor', compact('venta'));
+        return view('asesor.index', compact('venta'));
 
     }
 

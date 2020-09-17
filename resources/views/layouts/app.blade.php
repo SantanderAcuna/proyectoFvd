@@ -28,7 +28,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
-            <div class="container text-white">
+            <div class="container">
                 <a class="navbar-brand" href="{{ url('home') }}">
                     <img src="{{asset('img/favcir.ico') }}" style="width: 40px;" alt="Logo">
                     <img src="{{asset('img/logo.png') }}" style="width: 210px;" alt="Logo">
@@ -36,7 +36,7 @@
                 @if(auth()->check())
 
                 @if(auth()->user()->rol === 'asesor')
-                <a class="navbar-brand " class="text text-white" href="{{ route('mis.ventas')}}">
+                <a class="nav-item" class="text-white" href="{{ route('mis.ventas')}}">
 
                     Mis ventas
                 </a>

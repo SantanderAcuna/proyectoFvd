@@ -118,13 +118,7 @@ class ReporteController extends Controller
     }
 
 
-    public function misVentas(){
-
-        $venta = Reporte::where('user_id', '=', auth()->user()->id)->get();
-
-        return view('asesor.index', compact('venta'));
-
-    }
+  
 
     /**
      * Show the form for editing the specified resource.

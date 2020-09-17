@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Imports\SimcardImport;
+use App\Reporte;
 use App\Simcard;
 use App\User;
 use Illuminate\Http\Request;
@@ -20,6 +21,14 @@ class HomeController extends Controller
         $this->middleware('auth');
 
         // solo quiero saber si funciona
+    }
+
+    public function misVentas(){
+
+        $venta = Reporte::where('user_id', '=', auth()->user()->id)->get();
+
+        return view('asesor.index', compact('venta'));
+
     }
 
 

@@ -47,12 +47,12 @@
                 </a>
 
                 @else
-                <a class="navbar-brand " class="text text-white" href="{{ url('home') }}">
+                <a class="nav-item text-white" href="{{ url('home') }}">
 
                     Mis ventas
                 </a>
 
-                <a class="navbar-brand " class="text text-white" href="{{ route('reporte.ventas') }}">
+                <a class="nav-item text-white" href="{{ route('reporte.ventas') }}">
 
                     Panel administrativo
                 </a>

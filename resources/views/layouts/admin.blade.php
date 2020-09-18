@@ -95,7 +95,7 @@
 
                         <a class="nav-link" href="{{route('migracion.index')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
-                            Ingresar migracion
+                            Crear Chip migracion
                         </a>
 
                         <a class="nav-link" href="{{route('operador.index')}}">

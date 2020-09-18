@@ -14,6 +14,7 @@ Route::get('/', function () {
 Route::resource('migracion', 'MigracionController');
 
 Route::post('migracion', 'MigracionController@store')->name('migracion.store');
+Route::get('migracion', 'MigracionController@index')->name('migracion.index');
 
 Route::resource('operador', 'OperadorController');
 

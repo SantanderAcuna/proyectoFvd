@@ -49,6 +49,11 @@
                             Reportar venta
                         </a>
 
+                        <a class="navbar-brand text-white" href="{{route('migracion.index')}}">
+
+                            Crear chip migracion
+                        </a>
+
                         <a class="navbar-brand text-white" href="{{ route('mis.ventas')}}">
 
                             Mis ventas

@@ -30,6 +30,7 @@
                                     <td>{{$item->email}}</td>
                                     <td>{{$item->rol}}</td>
                                     <td class="row">
+                                        <div class="col-12">
                                         <form style="display: inline;" action="{{route('user.delete', $item->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
@@ -41,7 +42,7 @@
                                             Editar
 
                                         </a>
-
+                                        </div>
                                     </td>
 
 

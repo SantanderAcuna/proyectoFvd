@@ -80,7 +80,7 @@
 
                                             <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                                         </form>
-                                        <a href="{{route('reporte.edit', $item->id)}}" class="btn btn-warning btn-sm text-right ml-1">Editar</a>
+                                        <a href="{{route('reporte.edit', $item->id)}}" class="btn btn-warning btn-sm">Editar</a>
 
                                     </td>
 

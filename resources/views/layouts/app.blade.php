@@ -59,11 +59,6 @@
                             Mis ventas
                         </a>
                         @else
-                        <a class="navbar-brand text-white" href="{{ url('home') }}">
-
-                            Mis ventas
-                        </a>
-
                         <a class="navbar-brand text-white" href="{{ route('reporte.ventas') }}">
 
                             Panel administrativo
@@ -76,7 +71,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        
+
                         @guest
                         <li class="nav-item">
 
@@ -84,7 +79,7 @@
                         @if (Route::has('register'))
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">
-                               <!--  <img style="width: 40px;" src="{{asset('img/user.svg')}}" alt=""> -->  
+                                <!--  <img style="width: 40px;" src="{{asset('img/user.svg')}}" alt=""> -->
                             </a>
                         </li>
                         @endif

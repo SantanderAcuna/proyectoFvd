@@ -29,9 +29,7 @@
         </a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i>
         </button>
-           
-        
-       
+
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -39,27 +37,30 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
 
-                    <ul class="navbar-nav ml-auto ml-md-0">
-                @Auth
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
-                    </a>
+                        <div class="sb-sidenav-menu-heading">
 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item text-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            <ul class="navbar-nav ml-auto ml-md-0">
+                                @Auth
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item text-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                            <strong>{{ __('Salir') }}</strong>
-                        </a>
+                                            <strong>{{ __('Salir') }}</strong>
+                                        </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
 
-                </li>
-                @endauth
-            </ul>
+                                </li>
+                                @endauth
+                            </ul>
+                        </div>
 
                         <a class="nav-link" href="{{ route('home')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-sim-card"></i></div>

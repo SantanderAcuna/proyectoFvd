@@ -71,18 +71,17 @@
                                     <td>{{$item->operador}}</td>
                                     <td>{{$item->producto}}</td>
                                     <td>{{$item->created_at}}</td>
-                                    <td class="text text-center" width="30px">
-                                        <div class="row text text-center">
+                                    <td class="row">
 
 
-                                            <form style="display: inline;" action="{{route('reporte.destroy', $item->id)}}" method="post">
-                                                @csrf
-                                                @method('DELETE')
+                                        <form style="display: inline;" action="{{route('reporte.destroy', $item->id)}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
 
-                                                <button  type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                                            </form>
-                                            <a href="{{route('reporte.edit', $item->id)}}" class="btn btn-warning btn-sm text-right ml-1">Editar</a>
-                                        </div>
+                                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                        </form>
+                                        <a href="{{route('reporte.edit', $item->id)}}" class="btn btn-warning btn-sm text-right ml-1">Editar</a>
+
                                     </td>
 
                                 </tr>

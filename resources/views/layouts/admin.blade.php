@@ -8,14 +8,14 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Fvd2</title>
-        <!-- CSRF Token -->
+    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{'FVD 2'}}</title>
 
     <link rel="shortcut icon" href="{{ asset('img/favcir.ico') }}" type="image/x-icon">
 
-   
+
     <link href="{{asset('panel/css/styles.css')}}" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
@@ -39,11 +39,29 @@
         </form>
         <!-- Navbar-->
         <ul class="navbar-nav ml-auto ml-md-0">
+        @Auth
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                {{ Auth::user()->name }}
+                </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
             <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
 
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    <strong>{{ __('Salir') }}</strong>
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
             </li>
 
             <div class="dropdown-divider"></div>
@@ -62,6 +80,7 @@
             </div>
             </li>
         </ul>
+        @endauth
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -91,7 +110,7 @@
                             Inventario
                         </a>
 
-                       
+
 
                         <a class="nav-link" href="{{route('migracion.index')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-cubes"></i></div>
@@ -136,7 +155,7 @@
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
-                    
+
 
                 </div>
             </nav>

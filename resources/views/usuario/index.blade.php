@@ -38,7 +38,7 @@
                                             <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                                         </form>
 
-                                        <a href="{{ route('user.edit',$item->id)}}" class="btn btn-warning btn-sm text-right ml-1">
+                                        <a href="{{ route('user.edit',$item->id)}}" class="btn btn-warning btn-sm text-right my-2">
                                             Editar
 
                                         </a>

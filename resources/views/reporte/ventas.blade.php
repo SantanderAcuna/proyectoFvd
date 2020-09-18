@@ -13,7 +13,7 @@
                                 Reporte de ventas
                             </div>
 
-                       <!--     <div class="col-6 ml-2 mr-5">
+                            <!--     <div class="col-6 ml-2 mr-5">
                                 <form action="" method="get">
                                     @csrf
                                     <div class="row">
@@ -71,18 +71,18 @@
                                     <td>{{$item->operador}}</td>
                                     <td>{{$item->producto}}</td>
                                     <td>{{$item->created_at}}</td>
-                                    <td>
+                                    <td class="text text-center" width="30px">
+                                        <div class="row text text-center">
 
 
-                                        <form action="{{route('reporte.destroy', $item->id)}}" method="post">
-                                            @csrf
-                                            @method('DELETE')
+                                            <form action="{{route('reporte.destroy', $item->id)}}" method="post">
+                                                @csrf
+                                                @method('DELETE')
 
-                                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                                        </form>
-
-
-                                        <a href="{{route('reporte.edit', $item->id)}}" class="btn btn-warning btn-sm">Editar</a>
+                                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                            </form>
+                                            <a href="{{route('reporte.edit', $item->id)}}" class="btn btn-warning btn-sm">Editar</a>
+                                        </div>
                                     </td>
 
                                 </tr>

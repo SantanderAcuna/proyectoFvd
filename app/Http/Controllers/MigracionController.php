@@ -23,7 +23,7 @@ class MigracionController extends Controller
     public function index()
     {
         $migracion = Simcard::where('contenido', '=', 'Migracion')
-        ->orwhere('user_id', '=', auth()->user()->id)
+       
         ->orderBy('created_at', 'desc')->get();
         return view('migracion.index', compact('migracion'));
     }

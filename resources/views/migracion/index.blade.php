@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center mb-1">

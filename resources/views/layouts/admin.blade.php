@@ -31,7 +31,7 @@
         </button>
            
         
-        @endauth
+       
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -58,6 +58,7 @@
                     </div>
 
                 </li>
+                @endauth
             </ul>
 
                         <a class="nav-link" href="{{ route('home')}}">

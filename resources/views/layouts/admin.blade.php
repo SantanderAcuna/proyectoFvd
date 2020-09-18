@@ -28,8 +28,18 @@
             <img src="{{ asset('img/logo.png')}}" alt="">
         </a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i>
+        </button>
+           
+        
+        @endauth
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
 
-            <ul class="navbar-nav ml-auto ml-md-0">
+                    <ul class="navbar-nav ml-auto ml-md-0">
                 @Auth
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -49,16 +59,6 @@
 
                 </li>
             </ul>
-        </button>
-        @endauth
-    </nav>
-    <div id="layoutSidenav">
-        <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                <div class="sb-sidenav-menu">
-                    <div class="nav">
-
-                        <div class="sb-sidenav-menu-heading">Utilidades</div>
 
                         <a class="nav-link" href="{{ route('home')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-sim-card"></i></div>

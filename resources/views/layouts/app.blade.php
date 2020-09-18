@@ -33,31 +33,7 @@
                     <img src="{{asset('img/favcir.ico') }}" style="width: 40px;" alt="Logo">
                     <img src="{{asset('img/logo.png') }}" style="width: 210px;" alt="Logo">
                 </a>
-                @if(auth()->check())
 
-                @if(auth()->user()->rol === 'asesor')
-                <a class="navbar-brand text-white" href="{{ url('home') }}">
-
-                    Reportar venta
-                </a>
-
-                <a class="navbar-brand text-white" href="{{ route('mis.ventas')}}">
-
-                    Mis ventas
-                </a>
-                @else
-                <a class="navbar-brand text-white" href="{{ url('home') }}">
-
-                    Mis ventas
-                </a>
-
-                <a class="navbar-brand text-white" href="{{ route('reporte.ventas') }}">
-
-                    Panel administrativo
-                </a>
-
-                @endif
-                @endif
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -65,7 +41,31 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        @if(auth()->check())
 
+                        @if(auth()->user()->rol === 'asesor')
+                        <a class="navbar-brand text-white" href="{{ url('home') }}">
+
+                            Reportar venta
+                        </a>
+
+                        <a class="navbar-brand text-white" href="{{ route('mis.ventas')}}">
+
+                            Mis ventas
+                        </a>
+                        @else
+                        <a class="navbar-brand text-white" href="{{ url('home') }}">
+
+                            Mis ventas
+                        </a>
+
+                        <a class="navbar-brand text-white" href="{{ route('reporte.ventas') }}">
+
+                            Panel administrativo
+                        </a>
+
+                        @endif
+                        @endif
 
                     </ul>
 

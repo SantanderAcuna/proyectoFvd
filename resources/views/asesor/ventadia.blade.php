@@ -6,11 +6,9 @@
         <div class="col-md-12 mt-2">
             @include('include.msg')
             <div class="card-body">
-                <p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Ventas de hoy
-                    </a>
-                </p>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active">Ventas ingresadas hoy</li>
+                </ol>
             </div>
 
         </div>
@@ -21,7 +19,7 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead class="text-center">
                             <tr>
-                          
+
                                 <th>Imsi</th>
                                 <th>Iccid</th>
                                 <th>Documento</th>
@@ -34,7 +32,7 @@
                         <tbody class="text-center">
                             @foreach($venta as $item)
                             <tr>
-                          
+
                                 <td>{{$item->numero}}</td>
                                 <td>{{$item->iccid}}</td>
                                 <td>{{$item->documento}}</td>
@@ -49,9 +47,9 @@
                     </table>
                 </div>
             </div>
-    
+
+        </div>
     </div>
-</div>
 
 </div>
 @endsection

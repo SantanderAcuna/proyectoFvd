@@ -47,21 +47,32 @@
 
 
             </li>
-
+           
 
             <div class="dropdown-divider"></div>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item text-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                <a class="dropdown-item text-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                    <strong>{{ __('Salir') }}</strong>
-                </a>
+                                    <strong>{{ __('Salir') }}</strong>
+                                </a>
 
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </div>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+            <a class="dropdown-item" href="login.html">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        <strong>{{ __('Salir') }}</strong>
+                    </a>
 
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+            </a>
             </div>
             </li>
         </ul>

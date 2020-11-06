@@ -79,9 +79,10 @@
                                             @method('DELETE')
 
                                             <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                                        </form>
-                                        <a href="{{route('reporte.edit', $item->id)}}" class="btn btn-warning btn-sm">Editar</a>
+                                            <a href="{{route('reporte.edit', $item->id)}}" class="btn btn-warning btn-sm">Editar</a>
 
+                                        </form>
+                                     
                                     </td>
 
                                 </tr>

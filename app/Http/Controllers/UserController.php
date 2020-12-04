@@ -63,7 +63,7 @@ class HomeController extends Controller
     public function update(Request $request, $id)
     {
         $usuario = User::findOrFail($id);
-
+        $usuario->password = $request->password;
         $usuario->rol = $request->rol;
 
         $usuario->save();

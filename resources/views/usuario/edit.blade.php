@@ -34,6 +34,11 @@
                             <input type="text" class="form-control" id="rol" name="rol" value="{{$usuario->rol}}">
                         </div>
 
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <input type="text" class="form-control" id="password" name="password" value="{{$usuario->password}}">
+                        </div>
+
 
                         <div class="modal-footer">
                             <a href="{{ route('listar.usaurios')}}" class="btn btn-warning btn-sm text-center">
